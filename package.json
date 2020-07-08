@@ -1,0 +1,30 @@
+{
+  "name": "markup-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lh": "htmlhint **/*.html",
+    "lc": "stylelint **/*.css",
+    "comb": "csscomb ./",
+    "js": "eslint **/*.js",
+    "test": "npm run comb && npm run lh && npm run lc && npm run js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChorbaTatsiana/markup-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChorbaTatsiana/markup-task/issues"
+  },
+  "homepage": "https://github.com/ChorbaTatsiana/markup-task#readme",
+  "devDependencies": {
+    "csscomb": "^4.3.0",
+    "eslint": "^7.4.0",
+    "htmlhint": "^0.14.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  }
+}
