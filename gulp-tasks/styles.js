@@ -32,5 +32,5 @@ module.exports = function styles() {
     }))
     .pipe(sourcemaps.write())
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('build/styles'))
 }

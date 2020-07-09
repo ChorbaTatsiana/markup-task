@@ -1,0 +1,13 @@
+
+@import "./helpers/variables";
+
+.site-container {
+  max-width: 1400px;
+  overflow: hidden;
+  background-color: $color-site-container;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
