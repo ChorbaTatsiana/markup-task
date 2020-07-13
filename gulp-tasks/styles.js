@@ -20,7 +20,9 @@ module.exports = function styles() {
       ]
     }))
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: require('node-normalize-scss').includePaths
+    }))
     .pipe(autoprefixer({
       cascade: false
     }))

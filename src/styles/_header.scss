@@ -1,0 +1,64 @@
+@import "./helpers/variables";
+@import "./helpers/mixins";
+
+.header {
+  .container {
+    max-width: 1126px;
+    width: 100%;
+    background-image: url("../images/header-img.png");
+    background-position: top right;
+    margin-bottom: 110px;
+
+    @include bg-rules;
+  }
+}
+
+.header-wrapper-text {
+  max-width: 518px;
+  padding-left: 10px;
+  padding-top: 100px;
+  padding-right: 55px;
+  padding-bottom: 82px;
+}
+
+.header-title {
+  font-weight: 700;
+  font-size: 44px;
+  letter-spacing: 0.8px;
+  line-height: 54px;
+  padding-bottom: 30px;
+  color: #2f281e;
+}
+
+.header-text {
+  color: $color-header-text;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 55px;
+}
+
+.button-start {
+  @include button;
+  background-color: $color-button-org;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-left: 41px;
+  padding-bottom: 15px;
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  font-size: 16px;
+  color: $color-site-container;
+}
+
+.button-watch {
+  background-image: url("../images/buttno-triangle-org.svg");
+  color: $color-button-org;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 26px;
+  padding-left: 28px;
+  letter-spacing: 0.7px;
+
+  @include bg-rules;
+}

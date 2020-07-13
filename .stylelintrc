@@ -2,5 +2,6 @@
   "extends": "stylelint-config-htmlacademy",
   "rules": {
     "no-empty-source": null
-  }
+  },
+  "color-hex-length": "short"
 }

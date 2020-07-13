@@ -2,3 +2,27 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+@mixin button {
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+@mixin icon-for-cards($color-card) {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba($color-card, 0.25) 85%);
+}
+
+@mixin card-before($image, $color-card) {
+  content: "";
+  background-image: $image;
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: 50%;
+  width: 50px;
+  border: none;
+  border-radius: 19px;
+  background-color: $color-card;
+  position: absolute;
+}
