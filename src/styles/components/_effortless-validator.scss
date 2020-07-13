@@ -1,0 +1,28 @@
+@import "./common-styles";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.effortless-validation {
+  .container {
+    max-width: 1110px;
+    background-image: url("../images/effortless-img-first.png");
+    background-position: top right;
+    margin-bottom: 132px;
+
+    @include bg-rules;
+  }
+}
+
+.effortless-validation-wrapper {
+  max-width: 475px;
+  padding-top: 30px;
+
+  .h2 {
+    padding-bottom: 5px;
+  }
+
+  .p-second {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+}

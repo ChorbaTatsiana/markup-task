@@ -1,5 +1,6 @@
-@import "./helpers/variables";
-@import "./helpers/mixins";
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "./_common-styles";
 
 .navigation {
   width: 100%;
@@ -38,23 +39,8 @@
   color: $color-nav-link;
 }
 
-.navigation-button {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-
-  @include button;
-}
-
-.sign-in {
-  background-color: $color-site-container;
-  border: 1px solid #bcd0e5;
-  margin-right: 14px;
-  padding: 12px 22px 10px 22px;
-}
-
-.sign-up {
-  background-color: $color-button-org;
-  border: none;
-  padding: 11px 25px 11px 22px;
+.navigation-buttons {
+  .button-outline-small {
+    margin-right: 14px;
+  }
 }

@@ -1,0 +1,46 @@
+@import "./common-styles";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.product-managers {
+  .container {
+    max-width: 1121px;
+    background-image: url("../../images/product-manager-bg.png");
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 145px;
+
+    @include bg-rules;
+  }
+}
+
+.product-managers-wrapper {
+  max-width: 476px;
+
+  .p-second {
+    padding-top: 27px;
+    padding-bottom: 25px;
+  }
+}
+
+.product-manager-item::before {
+  content: "";
+  background-image: url("../images/effortless-icon.svg");
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+
+  @include bg-rules;
+}
+
+.product-manager-item {
+  display: flex;
+  align-items: center;
+  padding-right: 60px;
+
+  .p-second {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}

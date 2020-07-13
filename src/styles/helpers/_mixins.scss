@@ -3,8 +3,9 @@
   background-size: contain;
 }
 
-@mixin button {
+@mixin button($color-bg) {
   box-sizing: border-box;
+  background-color: $color-bg;
   border-radius: 4px;
 }
 
@@ -12,6 +13,13 @@
   width: 50px;
   height: 50px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba($color-card, 0.25) 85%);
+}
+
+@mixin fonts($weight, $size, $height, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
 }
 
 @mixin card-before($image, $color-card) {

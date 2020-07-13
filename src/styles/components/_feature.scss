@@ -1,5 +1,5 @@
-@import "./helpers/variables";
-@import "./helpers/mixins";
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
 
 .feature {
   background-image: url("../images/bg-feature.png");
@@ -7,13 +7,10 @@
   background-size: cover;
   background-position: center;
   padding-bottom: 90px;
+  margin-bottom: 120px;
 }
 
 .feature-title {
-  color: $color-header-title;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 54px;
   text-align: center;
   max-width: 520px;
   margin: 0 auto 54px;
@@ -36,7 +33,7 @@
 }
 
 .icon-card-second::before {
-  @include card-before(url("../images/icon-card-second.svg"), $color-button-org);
+  @include card-before(url("../images/icon-card-second.svg"), $color-button-bg);
 }
 
 .icon-card-three::before {
@@ -52,7 +49,7 @@
 }
 
 .icon-card-second {
-  @include icon-for-cards($color-button-org);
+  @include icon-for-cards($color-button-bg);
 }
 
 .icon-card-three {
@@ -64,30 +61,12 @@
 }
 
 .card-title {
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 33px;
-  color: $color-header-title;
   padding-top: 30px;
   padding-bottom: 15px;
 }
 
-.card-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
-}
-
 .feature-button {
-  @include button;
-  background-color: $color-button-org;
-  border-radius: 4px;
+  text-transform: uppercase;
   display: block;
   margin: 0 auto;
-  padding: 15px 33px;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: $color-site-container;
 }

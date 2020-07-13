@@ -1,0 +1,29 @@
+@import "./common-styles";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "./_slider.scss";
+
+.marketers {
+  .container {
+    max-width: 1110px;
+    background-image: url("../../images/marketers-bg.png");
+    background-position: top right;
+    margin-bottom: 132px;
+
+    @include bg-rules;
+  }
+}
+
+.marketers-wrapper {
+  max-width: 475px;
+  padding-top: 30px;
+
+  .h2 {
+    padding-bottom: 5px;
+  }
+
+  .p-second {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+}

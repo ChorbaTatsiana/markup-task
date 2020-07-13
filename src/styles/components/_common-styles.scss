@@ -1,0 +1,65 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+
+* {
+  font-family: $font-poppins-regular, sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.h1 {
+  @include fonts(700, 44px, 54px, $color-main-text);
+}
+
+.h2 {
+  @include fonts(bold, 36px, 54px, $color-header-title);
+}
+
+.h3 {
+  @include fonts(600, 22px, 33px, $color-header-title);
+}
+
+.h4 {
+  @include fonts(900, 16px, 26px, $color-header-title);
+}
+
+.p {
+  @include fonts(normal, 18px, 28px, $color-main-p);
+}
+
+.p-second {
+  @include fonts(500, 16px, 25px, $color-header-text);
+}
+
+.span-in-title {
+  display: block;
+
+  @include fonts(500, 16px, 24px, $color-header-text);
+}
+
+.button-filled-small {
+  border: none;
+  padding: 11px 25px 11px 22px;
+
+  @include button($color-button-bg);
+  @include fonts(600, 16px, 24px, $color-site-container);
+}
+
+.button-outline-small {
+  border: 1px solid $color-button-border;
+  padding: 12px 22px 10px 22px;
+
+  @include button($color-site-container);
+  @include fonts(600, 16px, 24px, $color-button-sign-in-text);
+}
+
+.button-filled-large {
+  border: none;
+  padding: 17px 44px 11px 37px;
+
+  @include button($color-button-bg);
+  @include fonts(bold, 16px, 24px, $color-site-container);
+}
