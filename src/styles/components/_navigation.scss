@@ -13,16 +13,10 @@
     align-items: center;
     padding-top: 13px;
   }
-}
 
-.navigation-logo {
-  background-image: url("../images/nav-logo.png");
-  height: 29px;
-  width: 143px;
-  padding-left: 40px;
-  margin-right: 311px;
-
-  @include bg-rules;
+  .navigation-logo {
+    margin-right: 311px;
+  }
 }
 
 .navigaton-list {

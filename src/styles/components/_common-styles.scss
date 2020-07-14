@@ -1,37 +1,17 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
 
-* {
-  font-family: $font-poppins-regular, sans-serif;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
 }
 
-.h1 {
-  @include fonts(700, 44px, 54px, $color-main-text);
+.active {
+  color: $color-button-bg;
 }
 
-.h2 {
-  @include fonts(bold, 36px, 54px, $color-header-title);
-}
-
-.h3 {
-  @include fonts(600, 22px, 33px, $color-header-title);
-}
-
-.h4 {
-  @include fonts(900, 16px, 26px, $color-header-title);
-}
-
-.p {
-  @include fonts(normal, 18px, 28px, $color-main-p);
-}
-
-.p-second {
-  @include fonts(500, 16px, 25px, $color-header-text);
+.active-input {
+  background-color: $color-button-bg;
 }
 
 .span-in-title {
@@ -56,10 +36,27 @@
   @include fonts(600, 16px, 24px, $color-button-sign-in-text);
 }
 
+.button-filled-medium {
+  border: none;
+  padding: 8px 16px;
+
+  @include button($color-button-bg);
+  @include fonts(bold, 16px, 24px, $color-site-container);
+}
+
 .button-filled-large {
   border: none;
   padding: 17px 44px 11px 37px;
 
   @include button($color-button-bg);
   @include fonts(bold, 16px, 24px, $color-site-container);
+}
+
+.navigation-logo {
+  background-image: url("../images/nav-logo.png");
+  height: 29px;
+  width: 143px;
+  padding-left: 40px;
+
+  @include bg-rules;
 }

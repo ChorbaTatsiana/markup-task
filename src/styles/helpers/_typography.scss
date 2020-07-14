@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+  font-family: $font-poppins-regular, sans-serif;
+}
+
+.h1 {
+  @include fonts(700, 44px, 54px, $color-main-text);
+}
+
+.h2 {
+  @include fonts(bold, 36px, 54px, $color-header-title);
+}
+
+.h3 {
+  @include fonts(600, 22px, 33px, $color-header-title);
+}
+
+.h4 {
+  @include fonts(900, 16px, 26px, $color-header-title);
+}
+
+.p {
+  @include fonts(normal, 18px, 28px, $color-main-p);
+}
+
+.p-second {
+  @include fonts(500, 16px, 25px, $color-header-text);
+}
+
+.p-slider {
+  @include fonts(bold, 24px, 34px, $color-main-text);
+  max-width: 294px;
+}
+
+.quick-link {
+  @include fonts(normal, 16px, 35px, $color-main-p);
+}
+
+.footer-nav-title {
+  @include fonts(bold, 20px, 30px, $color-main-text);
+}
+
+.span-in-slider {
+  @include fonts(bold, 16px, 28px, $color-header-text);
+}

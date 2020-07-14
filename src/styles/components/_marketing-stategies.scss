@@ -1,3 +1,67 @@
 @import "./common-styles";
 @import "../helpers/variables";
 @import "../helpers/mixins";
+
+.marketing-strategies {
+  .container {
+    max-width: 1107px;
+    margin-bottom: 100px;
+  }
+
+  .p-second {
+    padding-top: 7px;
+    padding-bottom: 55px;
+  }
+}
+
+.slider-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-item {
+  max-width: 348px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+
+  .p-second {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: $color-main-text;
+  display: inline-block;
+  height: 18px;
+  vertical-align: text-top;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.slider-dots {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.slider-dots_item {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 10px;
+  background-color: $color-bg-slider-circle;
+  border-radius: 50%;
+  display: inline-block;
+  border: none;
+  position: relative;
+}
+
+.slider-dots_item:hover {
+  background-color: $color-button-bg;
+}
+
+.slider-arrows {
+  display: none;
+}
