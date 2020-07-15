@@ -21,15 +21,15 @@
   @include fonts(900, 16px, 26px, $color-header-title);
 }
 
-.p {
+.text-regular {
   @include fonts(normal, 18px, 28px, $color-main-p);
 }
 
-.p-second {
+.text-small {
   @include fonts(500, 16px, 25px, $color-header-text);
 }
 
-.p-slider {
+.text-slider {
   @include fonts(bold, 24px, 34px, $color-main-text);
   max-width: 294px;
 }
@@ -42,6 +42,6 @@
   @include fonts(bold, 20px, 30px, $color-main-text);
 }
 
-.span-in-slider {
+.bold {
   @include fonts(bold, 16px, 28px, $color-header-text);
 }

@@ -11,23 +11,23 @@
 
     @include bg-rules;
   }
-}
 
-.header-wrapper-text {
-  max-width: 518px;
-  padding-left: 10px;
-  padding-top: 100px;
-  padding-right: 55px;
-  padding-bottom: 82px;
-}
+  &-wrapper-text {
+    max-width: 518px;
+    padding-left: 10px;
+    padding-top: 100px;
+    padding-right: 55px;
+    padding-bottom: 82px;
+  }
 
-.header-title {
-  letter-spacing: 0.8px;
-  padding-bottom: 30px;
-}
+  &-title {
+    letter-spacing: 0.8px;
+    padding-bottom: 30px;
+  }
 
-.header-text {
-  padding-bottom: 55px;
+  &-text {
+    padding-bottom: 55px;
+  }
 }
 
 .button-watch {

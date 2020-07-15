@@ -14,27 +14,28 @@
     padding-top: 13px;
   }
 
-  .navigation-logo {
+  & .logo {
     margin-right: 311px;
   }
-}
 
-.navigaton-list {
-  display: flex;
-}
-
-.navigation-item:not(:last-child) {
-  margin-right: 27px;
-}
-
-.navigation-link {
-  font-size: 14px;
-  line-height: 28px;
-  color: $color-nav-link;
-}
-
-.navigation-buttons {
-  .button-outline-small {
-    margin-right: 14px;
+  &-list {
+    display: flex;
   }
+
+  &-link {
+    font-size: 14px;
+    line-height: 28px;
+    color: $color-nav-link;
+  }
+
+  &-buttons {
+    .button-outline-small {
+      margin-right: 14px;
+    }
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 27px;
+  }
+
 }

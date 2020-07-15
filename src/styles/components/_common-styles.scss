@@ -14,7 +14,7 @@
   background-color: $color-button-bg;
 }
 
-.span-in-title {
+.sub-title {
   display: block;
 
   @include fonts(500, 16px, 24px, $color-header-text);
@@ -52,7 +52,7 @@
   @include fonts(bold, 16px, 24px, $color-site-container);
 }
 
-.navigation-logo {
+.logo {
   background-image: url("../images/nav-logo.png");
   height: 29px;
   width: 143px;

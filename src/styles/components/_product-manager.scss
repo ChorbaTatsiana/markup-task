@@ -14,37 +14,37 @@
 
     @include bg-rules;
   }
-}
 
-.product-managers-wrapper {
-  max-width: 476px;
+  &-wrapper {
+    max-width: 476px;
 
-  .p-second {
-    padding-top: 27px;
-    padding-bottom: 25px;
+    .text-small {
+      padding-top: 27px;
+      padding-bottom: 25px;
+    }
   }
-}
 
-.product-manager-item::before {
-  content: "";
-  background-image: url("../images/effortless-icon.svg");
-  width: 35px;
-  height: 35px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-70%);
+  &-item::before {
+    content: "";
+    background-image: url("../images/effortless-icon.svg");
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
 
-  @include bg-rules;
-}
+    @include bg-rules;
+  }
 
-.product-manager-item {
-  align-items: center;
-  padding-right: 60px;
-  position: relative;
+  &-item {
+    align-items: center;
+    padding-right: 60px;
+    position: relative;
 
-  .p-second {
-    padding-left: 60px;
-    padding-top: 10px;
-    padding-bottom: 20px;
+    .text-small {
+      padding-left: 60px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
   }
 }

@@ -8,24 +8,30 @@
   background-position: center;
   padding-bottom: 90px;
   margin-bottom: 120px;
-}
 
-.feature-title {
-  text-align: center;
-  max-width: 520px;
-  margin: 0 auto 54px;
-}
+  &-title {
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto 54px;
+  }
 
-.feature-cards {
-  max-width: 1095px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 33px;
-}
+  &-cards {
+    max-width: 1095px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+  }
+  
+  &-card {
+    flex-basis: 23%;
+    padding-left: 20px;
+  }
 
-.feature-card {
-  flex-basis: 23%;
-  padding-left: 20px;
+  &-button {
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .icon-card-first::before {
@@ -63,10 +69,4 @@
 .card-title {
   padding-top: 30px;
   padding-bottom: 15px;
-}
-
-.feature-button {
-  text-transform: uppercase;
-  display: block;
-  margin: 0 auto;
 }

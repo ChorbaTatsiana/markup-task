@@ -12,22 +12,30 @@
     padding-top: 105px;
   }
 
-  .button-outline-small {
+  & .button-outline-small {
     padding-right: 90px;
     margin-bottom: 20px;
 
     @include fonts(900, 16px, 28px, $color-footer-button-tel);
   }
-}
 
-.footer-form-wrapper {
-  max-width: 325px;
-}
+  &-form-wrapper {
+    max-width: 325px;
+  }
 
-.footer-nav {
-  margin-left: 80px;
-}
+  &-nav {
+    margin-left: 80px;
+  }
 
-.footer-nav-title {
-  padding-bottom: 33px;
+  &-nav-title {
+    padding-bottom: 33px;
+  }
+
+  &-item {
+    padding-bottom: 15px;
+  }
+
+  & .logo {
+    margin-right: 30px;
+  }
 }

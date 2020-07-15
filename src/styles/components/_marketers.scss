@@ -12,18 +12,18 @@
 
     @include bg-rules;
   }
-}
 
-.marketers-wrapper {
-  max-width: 475px;
-  padding-top: 30px;
+  &-wrapper {
+    max-width: 475px;
+    padding-top: 30px;
 
-  .h2 {
-    padding-bottom: 5px;
-  }
+    .h2 {
+      padding-bottom: 5px;
+    }
 
-  .p-second {
-    padding-top: 20px;
-    padding-bottom: 25px;
+    .text-small {
+      padding-top: 20px;
+      padding-bottom: 25px;
+    }
   }
 }
