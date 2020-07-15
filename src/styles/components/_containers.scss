@@ -1,14 +1,32 @@
 @import "./helpers/variables";
+@import "../helpers/_mixin-media";
 
 .site-container {
   max-width: 1400px;
   overflow: hidden;
   background-color: $color-site-container;
   font-family: $font-poppins-regular;
+
+  @include _960 {
+    max-width: 960px;
+   
+  }
+
+  @include _768 {
+    max-width: 768px;
+  }
 }
 
 .container {
   box-sizing: border-box;
-  margin: 0 auto;
+ 
   max-width: 1110px;
+
+  @include _960 {
+    max-width: 900px;
+  }
+
+  @include _768 {
+    max-width: 700px;
+  }
 }

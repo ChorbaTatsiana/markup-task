@@ -1,16 +1,20 @@
 @import "./common-styles";
 @import "../helpers/variables";
 @import "../helpers/mixins";
+@import "../helpers/_mixin-media";
 @import "./_slider.scss";
 
 .marketers {
   .container {
-    max-width: 1110px;
     background-image: url("../../images/marketers-bg.png");
     background-position: top right;
-    margin-bottom: 1020px;
+    margin-bottom: 20px;
 
     @include bg-rules;
+    @include _768 {
+      background-size: 50% 100%;
+      margin-bottom: 50px;
+    }
   }
 
   &-wrapper {
@@ -24,6 +28,14 @@
     .text-small {
       padding-top: 20px;
       padding-bottom: 25px;
+      @include _768 {
+        padding-bottom: 10px;;
+        padding-top: 10px;
+      }
+    }
+
+    @include _768 {
+      max-width: 375px;
     }
   }
 }

@@ -1,5 +1,6 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
 @import "./_common-styles";
 
 .header {
@@ -10,6 +11,13 @@
     margin-bottom: 110px;
 
     @include bg-rules;
+    @include _960 {
+      max-width: 900px;
+      margin-bottom: 70px;
+    }
+    @include _768 {
+      max-width: 700px;
+    }
   }
 
   &-wrapper-text {
@@ -18,6 +26,15 @@
     padding-top: 100px;
     padding-right: 55px;
     padding-bottom: 82px;
+
+    @include _960 {
+      padding-top: 55px;
+      padding-bottom: 0;
+    }
+    @include _768 {
+      padding-right: 10px;
+      padding-top: 20px;
+    }
   }
 
   &-title {
@@ -27,6 +44,10 @@
 
   &-text {
     padding-bottom: 55px;
+
+    @include _768 {
+      padding-bottom: 10px;
+    }
   }
 }
 
@@ -41,4 +62,9 @@
   letter-spacing: 0.7px;
 
   @include bg-rules;
+  @include _768 {
+    font-size: 10px;
+    line-height: 10px;
+    padding-left: 15px;
+  }
 }

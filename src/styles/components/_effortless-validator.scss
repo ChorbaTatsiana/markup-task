@@ -4,12 +4,18 @@
 
 .effortless-validation {
   .container {
-    max-width: 1110px;
     background-image: url("../images/effortless-img-first.png");
     background-position: top right;
     margin-bottom: 80px;
 
     @include bg-rules;
+
+    @include _960 {
+      margin-bottom: 40px;
+    }
+    @include _768 {
+      background-size: 50% 100%;
+    }
   }
 
   &-wrapper {
@@ -23,6 +29,15 @@
     .text-small {
       padding-top: 20px;
       padding-bottom: 25px;
+
+      @include _768 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+
+    @include _768 {
+      max-width: 375px;
     }
   }
 }

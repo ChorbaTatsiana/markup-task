@@ -1,15 +1,23 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
 
 .footer {
   margin-bottom: 95px;
+  
+  @include _960 {
+    margin-bottom: 20px;
+  }
 
   .container {
-    max-width: 1109px;
     border-top: 1px solid $color-footer-line;
     display: flex;
     justify-content: space-between;
     padding-top: 105px;
+
+    @include _768 {
+      padding-top: 20px;
+    }
   }
 
   & .button-outline-small {
@@ -17,25 +25,52 @@
     margin-bottom: 20px;
 
     @include fonts(900, 16px, 28px, $color-footer-button-tel);
+    @include _768 {
+      padding-right: 40px;
+      font-size: 12px;
+      line-height: 12px;
+    }
   }
 
   &-form-wrapper {
     max-width: 325px;
+
+    @include _768 {
+     max-width: 220px;
+    }
   }
 
   &-nav {
     margin-left: 80px;
+
+    @include _960 {
+      margin-left: 0;
+    }
   }
 
   &-nav-title {
     padding-bottom: 33px;
+
+    @include _960 {
+      padding-bottom: 10px;
+    }
   }
 
   &-item {
     padding-bottom: 15px;
+    
+    @include _960 {
+      padding-bottom: 0;
+    }
   }
 
   & .logo {
     margin-right: 30px;
+
+    @include _768 {
+      padding-left: 30px;
+      max-width: 70px;
+      max-height: 20px;
+    }
   }
 }

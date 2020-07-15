@@ -1,5 +1,6 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
 
 .container {
   width: 100%;
@@ -26,6 +27,10 @@
 
   @include button($color-button-bg);
   @include fonts(600, 16px, 24px, $color-site-container);
+  @include _768 {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .button-outline-small {
@@ -34,6 +39,10 @@
 
   @include button($color-site-container);
   @include fonts(600, 16px, 24px, $color-button-sign-in-text);
+  @include _768 {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .button-filled-medium {
@@ -42,6 +51,10 @@
 
   @include button($color-button-bg);
   @include fonts(bold, 16px, 24px, $color-site-container);
+  @include _768 {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .button-filled-large {
@@ -50,6 +63,10 @@
 
   @include button($color-button-bg);
   @include fonts(bold, 16px, 24px, $color-site-container);
+  @include _768 {
+    font-size: 10px;
+    line-height: 10px;
+  }
 }
 
 .logo {
@@ -59,4 +76,10 @@
   padding-left: 40px;
 
   @include bg-rules;
+}
+
+@include _768 {
+  .img-logo {
+    max-width: 70px;
+  }
 }

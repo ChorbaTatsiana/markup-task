@@ -1,5 +1,6 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
 
 .feature {
   background-image: url("../images/bg-feature.png");
@@ -9,10 +10,21 @@
   padding-bottom: 90px;
   margin-bottom: 120px;
 
+  @include _960 {
+    margin-bottom: 20px;
+  }
+
   &-title {
     text-align: center;
     max-width: 520px;
     margin: 0 auto 54px;
+
+    @include _960 {
+      margin: 0 auto 24px;
+    }
+    @include _768 {
+      margin-bottom: 55px;
+    }
   }
 
   &-cards {
@@ -20,11 +32,25 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 33px;
+
+    @include _960 {
+      max-width: 800px;
+      margin: 20px auto;
+      justify-content: space-around;
+    }
   }
-  
+
   &-card {
     flex-basis: 23%;
     padding-left: 20px;
+
+    @include _960 {
+      flex-basis: 24%;
+      padding-left: 0;
+    }
+    @include _768 {
+      flex-basis: 22%;
+    }
   }
 
   &-button {
@@ -69,4 +95,9 @@
 .card-title {
   padding-top: 30px;
   padding-bottom: 15px;
+
+  @include _960 {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
 }
