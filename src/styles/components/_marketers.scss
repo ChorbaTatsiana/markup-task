@@ -2,7 +2,6 @@
 @import "../helpers/variables";
 @import "../helpers/mixins";
 @import "../helpers/_mixin-media";
-@import "./_slider.scss";
 
 .marketers {
   .container {
@@ -14,6 +13,14 @@
     @include _768 {
       background-size: 50% 100%;
       margin-bottom: 50px;
+    }
+
+    @include _576 {
+      background-size: 50%;
+    }
+
+    @include _420 {
+      background-size: 40%
     }
   }
 
@@ -36,6 +43,21 @@
 
     @include _768 {
       max-width: 375px;
+    }
+
+    @include _576 {
+      max-width: 60%;
+    }
+
+    @include _420 {
+      max-width: 90%;
+    }
+
+    .text-small:first-of-type {
+      @include _420 {
+        padding-right: 30%;
+        text-align: initial;
+      }
     }
   }
 }

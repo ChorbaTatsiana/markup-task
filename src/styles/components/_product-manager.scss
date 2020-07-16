@@ -19,9 +19,20 @@
       max-width: 900px;
       margin-bottom: 40px;
     }
+
     @include _768 {
       max-width: 740px;
       background-size: 50% 100%;
+    }
+
+    @include _576 {
+      background-size: 35%;
+      padding-top: 0;
+      max-width: 520px;
+    }
+
+    @include _420 {
+      margin-bottom: 0;
     }
   }
 
@@ -36,8 +47,31 @@
     @include _960 {
       max-width: 400px;
     }
+
     @include _768 {
       max-width: 350px;
+    }
+
+    @include _576 {
+      max-width: 60%;
+    }
+
+    @include _420 {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .h2 {
+      @include _420 {
+        padding-left: 34%;
+      }
+    }
+
+    .text-small {
+      @include _420 {
+        padding-left: 34%;
+        text-align: justify;
+      }
     }
   }
 
@@ -51,6 +85,10 @@
     transform: translateY(-70%);
 
     @include bg-rules;
+    @include _576 {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &-item {
@@ -62,9 +100,12 @@
       padding-left: 60px;
       padding-top: 10px;
       padding-bottom: 20px;
-       @include _768 {
-        padding-bottom: 10px;
-       }
+      @include _768 {
+      padding-bottom: 10px;
+      }
+      @include _576 {
+      padding-left: 30px;
+      }
     }
   }
 }

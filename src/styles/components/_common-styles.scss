@@ -9,6 +9,10 @@
 
 .active {
   color: $color-button-bg;
+  
+  @include _420 {
+    margin: 0 auto;
+  }
 }
 
 .active-input {
@@ -31,6 +35,10 @@
     font-size: 10px;
     line-height: 10px;
   }
+
+  @include _576 {
+    padding: 7px 10px;
+  }
 }
 
 .button-outline-small {
@@ -42,6 +50,10 @@
   @include _768 {
     font-size: 10px;
     line-height: 10px;
+  }
+
+  @include _576 {
+    padding: 7px 10px;
   }
 }
 
@@ -66,6 +78,10 @@
   @include _768 {
     font-size: 10px;
     line-height: 10px;
+  }
+
+  @include _576 {
+    padding: 10px 15px;
   }
 }
 

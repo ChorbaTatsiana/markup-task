@@ -22,8 +22,13 @@
     @include _960 {
       margin: 0 auto 24px;
     }
+
     @include _768 {
       margin-bottom: 55px;
+    }
+
+    @include _420 {
+      margin-bottom: 0;
     }
   }
 
@@ -38,6 +43,20 @@
       margin: 20px auto;
       justify-content: space-around;
     }
+
+    @include _576 {
+      flex-wrap: wrap;
+      max-width: 90%;
+    }
+
+    @include _420 {
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    @include _420 {
+      max-width: 70%;
+    }
   }
 
   &-card {
@@ -48,8 +67,14 @@
       flex-basis: 24%;
       padding-left: 0;
     }
+
     @include _768 {
       flex-basis: 22%;
+    }
+    
+    @include _576 {
+      flex-basis: 40%;
+      margin-bottom: 30px;
     }
   }
 
@@ -57,6 +82,11 @@
     text-transform: uppercase;
     display: block;
     margin: 0 auto;
+  }
+  .text-small {
+    @include _420 {
+      padding-left: 40px;
+    }
   }
 }
 
@@ -78,18 +108,30 @@
 
 .icon-card-first {
   @include icon-for-cards($icon-card-purpl);
+  @include _420 {
+    position: absolute;
+  }
 }
 
 .icon-card-second {
   @include icon-for-cards($color-button-bg);
+  @include _420 {
+    position: absolute;
+  }
 }
 
 .icon-card-three {
   @include icon-for-cards($icon-card-red);
+  @include _420 {
+    position: absolute;
+  }
 }
 
 .icon-card-four {
   @include icon-for-cards($icon-card-blue);
+  @include _420 {
+    position: absolute;
+  }
 }
 
 .card-title {
@@ -99,5 +141,9 @@
   @include _960 {
     padding-top: 15px;
     padding-bottom: 10px;
+  }
+  @include _420 {
+    padding-left: 40px;
+    padding-top: 0;
   }
 }

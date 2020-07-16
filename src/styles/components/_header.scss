@@ -18,6 +18,16 @@
     @include _768 {
       max-width: 700px;
     }
+    @include _576 {
+      max-width: 90%;
+      background-size: 30%;
+      background-position-y: 80%;
+      background-position-x: 90%;
+    }
+    @include _420 {
+      background-size: 30%;
+      background-position-y: 50%;
+    }
   }
 
   &-wrapper-text {
@@ -31,6 +41,7 @@
       padding-top: 55px;
       padding-bottom: 0;
     }
+    
     @include _768 {
       padding-right: 10px;
       padding-top: 20px;
@@ -47,6 +58,21 @@
 
     @include _768 {
       padding-bottom: 10px;
+    }
+
+    @include _576 {
+      padding-bottom: 20px;
+      max-width: 350px;
+    }
+
+    @include _576 {
+      max-width: 60%;
+      text-align: justify;
+    }
+
+    @include _420 {
+      line-height: 15px;
+      font-size: 10px;
     }
   }
 }

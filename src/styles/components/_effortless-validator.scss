@@ -9,12 +9,17 @@
     margin-bottom: 80px;
 
     @include bg-rules;
-
+    
     @include _960 {
       margin-bottom: 40px;
     }
+
     @include _768 {
       background-size: 50% 100%;
+    }
+
+    @include _576 {
+      background-size: 50%;
     }
   }
 
@@ -24,6 +29,9 @@
 
     .h2 {
       padding-bottom: 5px;
+      @include _420 {
+        padding-right: 45%;
+      }
     }
 
     .text-small {
@@ -38,6 +46,21 @@
 
     @include _768 {
       max-width: 375px;
+    }
+    
+    @include _576 {
+      max-width: 60%;
+    }
+
+    @include _420 {
+      max-width: 90%;
+    }
+
+    .text-small:first-of-type {
+      @include _420 {
+        padding-right: 45%;
+        text-align: initial;
+      }
     }
   }
 }
