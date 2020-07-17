@@ -7,25 +7,30 @@
   .container {
     background-image: url("../../images/marketers-bg.png");
     background-position: top right;
-    margin-bottom: 20px;
+    margin-bottom: 1025px;
 
     @include bg-rules;
-    @include _768 {
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    @include tablet-portrait {
       background-size: 50% 100%;
       margin-bottom: 50px;
     }
 
-    @include _576 {
-      background-size: 50%;
-    }
-
-    @include _420 {
-      background-size: 40%
+    @include mobile-landscape {
+      background-size: 30%;
+      background-position-x: 50%;
+      margin-bottom: 10px;
+      padding-top: 200px;
     }
   }
 
   &-wrapper {
-    max-width: 475px;
+    padding-right: 620px;
     padding-top: 30px;
 
     .h2 {
@@ -35,29 +40,24 @@
     .text-small {
       padding-top: 20px;
       padding-bottom: 25px;
-      @include _768 {
-        padding-bottom: 10px;;
+
+      @include tablet-portrait {
+        padding-bottom: 10px;
         padding-top: 10px;
       }
     }
 
-    @include _768 {
-      max-width: 375px;
+    @include tablet {
+      padding: 10px 450px 10px 20px;
     }
 
-    @include _576 {
-      max-width: 60%;
+    @include tablet-portrait {
+      padding-right: 350px;
     }
 
-    @include _420 {
-      max-width: 90%;
-    }
-
-    .text-small:first-of-type {
-      @include _420 {
-        padding-right: 30%;
-        text-align: initial;
-      }
+    @include mobile-landscape {
+      padding: 10px;
+      text-align: center;
     }
   }
 }

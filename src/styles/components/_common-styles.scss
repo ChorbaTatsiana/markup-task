@@ -9,14 +9,6 @@
 
 .active {
   color: $color-button-bg;
-  
-  @include _420 {
-    margin: 0 auto;
-  }
-}
-
-.active-input {
-  background-color: $color-button-bg;
 }
 
 .sub-title {
@@ -31,12 +23,9 @@
 
   @include button($color-button-bg);
   @include fonts(600, 16px, 24px, $color-site-container);
-  @include _768 {
-    font-size: 10px;
-    line-height: 10px;
-  }
+  @include tablet-portrait-fonts;
 
-  @include _576 {
+  @include mobile-landscape {
     padding: 7px 10px;
   }
 }
@@ -47,12 +36,9 @@
 
   @include button($color-site-container);
   @include fonts(600, 16px, 24px, $color-button-sign-in-text);
-  @include _768 {
-    font-size: 10px;
-    line-height: 10px;
-  }
+  @include tablet-portrait-fonts;
 
-  @include _576 {
+  @include mobile-landscape {
     padding: 7px 10px;
   }
 }
@@ -63,10 +49,7 @@
 
   @include button($color-button-bg);
   @include fonts(bold, 16px, 24px, $color-site-container);
-  @include _768 {
-    font-size: 10px;
-    line-height: 10px;
-  }
+  @include tablet-portrait-fonts;
 }
 
 .button-filled-large {
@@ -75,12 +58,9 @@
 
   @include button($color-button-bg);
   @include fonts(bold, 16px, 24px, $color-site-container);
-  @include _768 {
-    font-size: 10px;
-    line-height: 10px;
-  }
+  @include tablet-portrait-fonts;
 
-  @include _576 {
+  @include mobile-landscape {
     padding: 10px 15px;
   }
 }
@@ -94,7 +74,7 @@
   @include bg-rules;
 }
 
-@include _768 {
+@include tablet-portrait {
   .img-logo {
     max-width: 70px;
   }

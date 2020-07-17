@@ -10,52 +10,47 @@
   padding-bottom: 90px;
   margin-bottom: 120px;
 
-  @include _960 {
+  @include tablet {
     margin-bottom: 20px;
+  }
+
+  @include mobile-landscape {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
   }
 
   &-title {
     text-align: center;
-    max-width: 520px;
+    padding: 0 300px;
     margin: 0 auto 54px;
 
-    @include _960 {
+    @include tablet {
       margin: 0 auto 24px;
+      padding: 0;
     }
 
-    @include _768 {
+    @include tablet-portrait {
       margin-bottom: 55px;
     }
 
-    @include _420 {
-      margin-bottom: 0;
+    @include mobile-landscape {
+      margin-bottom: 5px;
     }
   }
 
   &-cards {
-    max-width: 1095px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 33px;
 
-    @include _960 {
-      max-width: 800px;
-      margin: 20px auto;
-      justify-content: space-around;
-    }
-
-    @include _576 {
+    @include tablet {
+      margin: 20px;
       flex-wrap: wrap;
-      max-width: 90%;
+      justify-content: center;
     }
 
-    @include _420 {
-      flex-direction: column;
-      justify-content: start;
-    }
-
-    @include _420 {
-      max-width: 70%;
+    @include mobile-landscape {
+      margin-bottom: 0;
     }
   }
 
@@ -63,18 +58,14 @@
     flex-basis: 23%;
     padding-left: 20px;
 
-    @include _960 {
-      flex-basis: 24%;
-      padding-left: 0;
-    }
-
-    @include _768 {
-      flex-basis: 22%;
-    }
-    
-    @include _576 {
+    @include tablet {
       flex-basis: 40%;
       margin-bottom: 30px;
+    }
+    
+    @include mobile-landscape {
+      flex-basis: 70%;
+      position: relative;
     }
   }
 
@@ -83,9 +74,10 @@
     display: block;
     margin: 0 auto;
   }
+
   .text-small {
-    @include _420 {
-      padding-left: 40px;
+    @include mobile-landscape {
+      padding-left: 30px;
     }
   }
 }
@@ -108,42 +100,35 @@
 
 .icon-card-first {
   @include icon-for-cards($icon-card-purpl);
-  @include _420 {
-    position: absolute;
-  }
+  @include position;
 }
 
 .icon-card-second {
   @include icon-for-cards($color-button-bg);
-  @include _420 {
-    position: absolute;
-  }
+  @include position;
 }
 
 .icon-card-three {
   @include icon-for-cards($icon-card-red);
-  @include _420 {
-    position: absolute;
-  }
+  @include position;
 }
 
 .icon-card-four {
   @include icon-for-cards($icon-card-blue);
-  @include _420 {
-    position: absolute;
-  }
+  @include position;
 }
 
 .card-title {
   padding-top: 30px;
   padding-bottom: 15px;
 
-  @include _960 {
+  @include tablet {
     padding-top: 15px;
     padding-bottom: 10px;
   }
-  @include _420 {
-    padding-left: 40px;
+
+  @include mobile-landscape {
+    padding-left: 30px;
     padding-top: 0;
   }
 }

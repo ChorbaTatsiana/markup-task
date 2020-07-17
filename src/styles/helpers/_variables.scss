@@ -1,16 +1,17 @@
 @import "../components/_fonts";
 
 //colors:
+
 $color-site-container: #ffffff;
-$color-button-text: #ffffff;
+$color-button-text: $color-site-container;
 $color-nav-link: #2f281e;
-$color-main-text: #2f281e;
+$color-main-text:$color-nav-link;
 $color-button-bg: #ff9900;
 $color-button-sign-in-text:#173a56;
 $color-button-border: #bcd0e5;
-$color-header-title: #2f281e;
+$color-header-title:$color-nav-link;
 $color-header-text: #544837;
-$color-main-p: #544837;
+$color-main-p: $color-header-text;
 $icon-card-purpl: #7752be;
 $icon-card-red: #f03e3d;
 $icon-card-blue: #4dadf7;
@@ -21,4 +22,6 @@ $color-bg-burger-list: #eceff1;
 $color-bg-burger: #616161;
 
 //fonts
+
 $font-poppins-regular: "Poppins";
+$font-avenir-regular: "Avenir";

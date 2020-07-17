@@ -8,34 +8,33 @@
   margin-top: 20px;
   margin-bottom: 30px;
 
+  @include mobile-landscape {
+    margin: 0;
+  }
+
   .container {
+    padding-top: 13px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 13px;
 
-    @include _960 {
+    @include tablet {
       justify-content: space-around;
-      margin-bottom: 50px;
-    }
-    
-    @include _420 {
-      margin-bottom: 0;
     }
   }
 
-  & .logo {
+  .logo {
     margin-right: 311px;
 
-    @include _960 {
+    @include tablet {
       margin-right: 0;
     }
 
-    @include _768 {
+    @include tablet-portrait {
       padding-left: 30px;
-      max-width: 70px;
+      max-width: 70px; 
       max-height: 20px;
-    } 
+    }
   }
 
   &-list {
@@ -57,9 +56,9 @@
   &-item:not(:last-child) {
     margin-right: 27px;
 
-    @include _768 {
+    @include tablet-portrait {
       margin-right: 10px;
-    }  
+    }
   }
 }
 
@@ -67,10 +66,11 @@
   display: none;
 }
 
-@include _576 {
+@include mobile-landscape {
   .hamburger-menu {
     position: relative;
     top: -13px;
+    left: -40px;
     order: -1;
   }
 
@@ -81,8 +81,8 @@
   }
 
   .menu-btn {
-    display: flex; 
-    align-items: center;  
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -90,7 +90,7 @@
     height: 26px;
     z-index: 1;
   }
-  
+
   .menu-btn > span,
   .menu-btn > span::before,
   .menu-btn > span::after {
@@ -102,12 +102,12 @@
   }
 
   .menu-btn > span::before {
-    content: '';
+    content: "";
     top: -8px;
   }
 
   .menu-btn > span::after {
-    content: '';
+    content: "";
     top: 8px;
   }
 
@@ -121,30 +121,32 @@
     width: 150px;
     margin: 0;
     background-color: $color-bg-burger-list;
-    box-shadow: 1px 0 6px rgba($color-bg-burger,.2);
+    box-shadow: 1px 0 6px rgba($color-bg-burger, 0.2);
   }
-  
+
   .navigation-item {
     display: block;
     padding: 5px 15px;
   }
 
   .navigation-item:hover {
-    background-color:  $color-bg-burger-list;
+    background-color: $color-footer-button-tel;
+    margin: 0;
   }
 
   .menu-toggle:checked ~ .menu-btn > span {
-    transform: rotate(45deg);
+    transform: rotate(-405deg);
+    transition: 0.1s all linear;
   }
 
   .menu-toggle:checked ~ .menu-btn > span::before {
-    top: 0;
-    transform: rotate(0);
+    opacity: 0;
   }
 
   .menu-toggle:checked ~ .menu-btn > span::after {
     top: 0;
-    transform: rotate(90deg);
+    transform: rotate(450deg);
+    transition: 0.1s all linear;
   }
 
   .menu-toggle:checked ~ .navigation-list {

@@ -4,9 +4,9 @@
 
 .footer {
   margin-bottom: 95px;
-  
-  @include _960 {
-    margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 0;
   }
 
   .container {
@@ -15,12 +15,14 @@
     justify-content: space-between;
     padding-top: 105px;
 
-    @include _768 {
-      padding-top: 20px;
+    @include tablet {
+      padding: 20px;
+      justify-content: space-around;
     }
-    @include _576 {
-      flex-wrap: wrap;
-      justify-content: center;
+
+    @include tablet-portrait {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -29,100 +31,101 @@
     margin-bottom: 20px;
 
     @include fonts(900, 16px, 28px, $color-footer-button-tel);
-    @include _768 {
+
+    @include tablet-portrait {
       padding-right: 40px;
       font-size: 12px;
       line-height: 12px;
     }
-
-    @include _420 {
-      padding: 7px 7px;
-      font-size: 10px;
-    }
   }
 
   &-form-wrapper {
-    max-width: 325px;
+    flex-basis: 29%;
 
-    @include _768 {
-      max-width: 220px;
+    @include tablet-portrait {
+      text-align: center;
     }
 
-    @include _576 {
-      max-width: 80%;
+    @include mobile-landscape {
+      padding: 0px 150px;
     }
   }
 
   &-nav {
     margin-left: 80px;
 
-    @include _960 {
+    @include tablet {
       margin-left: 0;
     }
 
-    @include _576 {
-      margin-bottom: 20px;
-    }
-  }
-
-  &-nav:first-child {
-    @include _576 {
-      flex-basis: 70%;
+    @include mobile-landscape {
+      margin-bottom: 0;
+      padding: 0;
     }
   }
 
   &-nav-title {
     padding-bottom: 33px;
 
-    @include _960 {
+    @include tablet {
       padding-bottom: 10px;
     }
 
-    @include _576 {
+    @include tablet-portrait {
       text-align: center;
+    }
+
+    @include mobile-landscape {
       font-size: 10px;
+      padding: 0;
     }
   }
 
   &-item {
-    padding-bottom: 15px;
-    
-    @include _960 {
+
+    @include tablet {
       padding-bottom: 0;
     }
 
-    @include _576 {
-      padding: 0 20px;
+    @include tablet-portrait {
+      padding: 10px 20px;
     }
 
-    @include _420 {
-      padding: 0 10px;
+    @include mobile-landscape {
+      padding: 5px;
     }
   }
 
-  & .logo {
+  .logo {
     margin-right: 30px;
 
-    @include _768 {
+    @include tablet-portrait {
       padding-left: 30px;
       max-width: 70px;
       max-height: 20px;
+      margin-bottom: 10px;
     }
 
-    @include _576 {
+    @include mobile-landscape {
       flex-basis: 20%;
     }
   }
 
   &-list {
-    @include _576 {
+    @include tablet-portrait {
       display: flex;
     }
   }
-}
 
-.extra-mob-footer {
-  @include _576 {
-    display: none;
+  .button-outline-small {
+    @include tablet {
+      padding: 5px 10px;
+    }
+
+    @include mobile-landscape {
+      font-size: 10px;
+      padding: 5px;
+      margin: 3px;
+    }
   }
 }

@@ -9,57 +9,44 @@
     margin-bottom: 80px;
 
     @include bg-rules;
-    
-    @include _960 {
+
+    @include tablet {
       margin-bottom: 40px;
+      padding: 20px;
+      background-size: 40%;
     }
 
-    @include _768 {
-      background-size: 50% 100%;
-    }
-
-    @include _576 {
-      background-size: 50%;
+    @include mobile-landscape {
+      background-position-x: 50%;
+      margin-bottom: 0;
     }
   }
 
   &-wrapper {
-    max-width: 475px;
     padding-top: 30px;
+    padding-right: 616px;
+
+    @include tablet {
+      padding-right: 300px;
+    }
+
+    @include mobile-landscape {
+      padding-right: 0;
+      padding-top: 250px;
+      text-align: center;
+    }
 
     .h2 {
       padding-bottom: 5px;
-      @include _420 {
-        padding-right: 45%;
-      }
     }
 
     .text-small {
       padding-top: 20px;
       padding-bottom: 25px;
 
-      @include _768 {
+      @include tablet-portrait {
         padding-top: 10px;
         padding-bottom: 10px;
-      }
-    }
-
-    @include _768 {
-      max-width: 375px;
-    }
-    
-    @include _576 {
-      max-width: 60%;
-    }
-
-    @include _420 {
-      max-width: 90%;
-    }
-
-    .text-small:first-of-type {
-      @include _420 {
-        padding-right: 45%;
-        text-align: initial;
       }
     }
   }

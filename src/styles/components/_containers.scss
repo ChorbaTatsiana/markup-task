@@ -7,24 +7,8 @@
   background-color: $color-site-container;
   font-family: $font-poppins-regular;
 
-  @include _960 {
-    max-width: 960px;
-  }
-
-  @include _768 {
-    max-width: 768px;
-  }
-
-  @include _576 {
-    max-width: 576px;
-  }
-
-  @include _420 {
-    max-width: 420px;
-  }
-
-  @include _350 {
-    max-width: 350px;
+  @include tablet {
+    max-width: 100%;
   }
 }
 
@@ -32,15 +16,7 @@
   box-sizing: border-box;
   max-width: 1110px;
 
-  @include _960 {
-    max-width: 900px;
-  }
-
-  @include _768 {
-    max-width: 700px;
-  }
-
-  @include _576 {
-    max-width: 90%;
+  @include tablet {
+    max-width: 100%;
   }
 }
