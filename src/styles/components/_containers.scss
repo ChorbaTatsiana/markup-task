@@ -1,0 +1,22 @@
+@import "./helpers/variables";
+@import "../helpers/_mixin-media";
+
+.site-container {
+  max-width: 1400px;
+  overflow: hidden;
+  background-color: $color-site-container;
+  font-family: $font-poppins-regular;
+
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1110px;
+
+  @include tablet {
+    max-width: 100%;
+  }
+}

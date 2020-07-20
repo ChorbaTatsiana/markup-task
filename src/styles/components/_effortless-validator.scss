@@ -1,0 +1,53 @@
+@import "./common-styles";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+
+.effortless-validation {
+  .container {
+    background-image: url("../images/effortless-img-first.png");
+    background-position: top right;
+    margin-bottom: 80px;
+
+    @include bg-rules;
+
+    @include tablet {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-size: 40%;
+    }
+
+    @include mobile-landscape {
+      background-position-x: 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  &-wrapper {
+    padding-top: 30px;
+    padding-right: 616px;
+
+    @include tablet {
+      padding-right: 300px;
+    }
+
+    @include mobile-landscape {
+      padding-right: 0;
+      padding-top: 250px;
+      text-align: center;
+    }
+
+    .h2 {
+      padding-bottom: 5px;
+    }
+
+    .text-small {
+      padding-top: 20px;
+      padding-bottom: 25px;
+
+      @include tablet-portrait {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

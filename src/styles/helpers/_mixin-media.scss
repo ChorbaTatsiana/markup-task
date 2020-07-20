@@ -1,0 +1,37 @@
+@mixin tablet {
+  
+  @media (max-width: 960px){
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+
+  @media (max-width: 768px){
+    @content;
+  }
+}
+
+@mixin  tablet-portrait-fonts {
+
+  @media (max-width:768px){
+    font-size: 10px;
+    line-height: 10px;
+  } 
+}
+
+@mixin mobile-landscape {
+
+  @media (max-width: 576px){
+    @content;
+  }
+}
+
+@mixin position {
+
+  @media (max-width: 576px){
+    position: absolute;
+    top: 0;
+    left: 0;
+  }  
+}

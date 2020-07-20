@@ -1,0 +1,78 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
+@import "./_common-styles";
+
+.header {
+  .container {
+    max-width: 1126px;
+    width: 100%;
+    background-image: url("../images/header-img.png");
+    background-position: top right;
+    margin-bottom: 110px;
+
+    @include bg-rules;
+
+    @include tablet {
+      margin-bottom: 30px;
+      padding: 0 40px;
+    }
+
+    @include mobile-landscape {
+      background-size: 30%;
+      background-position-y: 80%;
+      background-position-x: 90%;
+    }
+  }
+
+  &-wrapper-text {
+    max-width: 518px;
+    padding: 100px 55px 82px 10px;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include tablet-portrait {
+      padding-right: 10px;
+      padding-top: 20px;
+    }
+  }
+
+  &-title {
+    letter-spacing: 0.8px;
+    padding-bottom: 30px;
+  }
+
+  &-text {
+    padding-bottom: 55px;
+
+    @include tablet-portrait {
+      padding-bottom: 10px;
+    }
+
+    @include mobile-landscape {
+      padding-bottom: 20px;
+      padding-right: 150px;
+    }
+  }
+}
+
+.button-watch {
+  background-image: url("../images/buttno-triangle-org.svg");
+  color: $color-button-bg;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 26px;
+  padding-left: 28px;
+  letter-spacing: 0.7px;
+
+  @include bg-rules;
+
+  @include tablet-portrait {
+    font-size: 10px;
+    line-height: 10px;
+    padding-left: 15px;
+  }
+}

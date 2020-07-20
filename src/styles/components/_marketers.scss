@@ -1,0 +1,63 @@
+@import "./common-styles";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/_mixin-media";
+
+.marketers {
+  .container {
+    background-image: url("../../images/marketers-bg.png");
+    background-position: top right;
+    margin-bottom: 1025px;
+
+    @include bg-rules;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    @include tablet-portrait {
+      background-size: 50% 100%;
+      margin-bottom: 50px;
+    }
+
+    @include mobile-landscape {
+      background-size: 30%;
+      background-position-x: 50%;
+      margin-bottom: 10px;
+      padding-top: 200px;
+    }
+  }
+
+  &-wrapper {
+    padding-right: 620px;
+    padding-top: 30px;
+
+    .h2 {
+      padding-bottom: 5px;
+    }
+
+    .text-small {
+      padding-top: 20px;
+      padding-bottom: 25px;
+
+      @include tablet-portrait {
+        padding-bottom: 10px;
+        padding-top: 10px;
+      }
+    }
+
+    @include tablet {
+      padding: 10px 450px 10px 20px;
+    }
+
+    @include tablet-portrait {
+      padding-right: 350px;
+    }
+
+    @include mobile-landscape {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}

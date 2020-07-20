@@ -1,0 +1,131 @@
+@import "../helpers/_variables";
+@import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
+
+.footer {
+  margin-bottom: 95px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+
+  .container {
+    border-top: 1px solid $color-footer-line;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 105px;
+
+    @include tablet {
+      padding: 20px;
+      justify-content: space-around;
+    }
+
+    @include tablet-portrait {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  & .button-outline-small {
+    padding-right: 90px;
+    margin-bottom: 20px;
+
+    @include fonts(900, 16px, 28px, $color-footer-button-tel);
+
+    @include tablet-portrait {
+      padding-right: 40px;
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+
+  &-form-wrapper {
+    flex-basis: 29%;
+
+    @include tablet-portrait {
+      text-align: center;
+    }
+
+    @include mobile-landscape {
+      padding: 0px 150px;
+    }
+  }
+
+  &-nav {
+    margin-left: 80px;
+
+    @include tablet {
+      margin-left: 0;
+    }
+
+    @include mobile-landscape {
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  &-nav-title {
+    padding-bottom: 33px;
+
+    @include tablet {
+      padding-bottom: 10px;
+    }
+
+    @include tablet-portrait {
+      text-align: center;
+    }
+
+    @include mobile-landscape {
+      font-size: 10px;
+      padding: 0;
+    }
+  }
+
+  &-item {
+
+    @include tablet {
+      padding-bottom: 0;
+    }
+
+    @include tablet-portrait {
+      padding: 10px 20px;
+    }
+
+    @include mobile-landscape {
+      padding: 5px;
+    }
+  }
+
+  .logo {
+    margin-right: 30px;
+
+    @include tablet-portrait {
+      padding-left: 30px;
+      max-width: 70px;
+      max-height: 20px;
+      margin-bottom: 10px;
+    }
+
+    @include mobile-landscape {
+      flex-basis: 20%;
+    }
+  }
+
+  &-list {
+    @include tablet-portrait {
+      display: flex;
+    }
+  }
+
+  .button-outline-small {
+    @include tablet {
+      padding: 5px 10px;
+    }
+
+    @include mobile-landscape {
+      font-size: 10px;
+      padding: 5px;
+      margin: 3px;
+    }
+  }
+}

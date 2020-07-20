@@ -1,0 +1,99 @@
+@import "./common-styles";
+@import "../helpers/variables";
+@import "../helpers/mixins";
+@import "../helpers/_mixin-media";
+
+.product-managers {
+  .container {
+    max-width: 1121px;
+    background-image: url("../../images/product-manager-bg.png");
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 110px;
+    padding-top: 55px;
+    padding-bottom: 30px;
+
+    @include bg-rules;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    @include tablet-portrait {
+      background-size: 50% 100%;
+    }
+
+    @include mobile-landscape {
+      background-size: 35%;
+      padding-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      background-position-x: 50%;
+    }
+  }
+
+  &-wrapper {
+    padding-left: 645px;
+
+    .text-small {
+      padding-top: 27px;
+      padding-bottom: 25px;
+    }
+
+    @include tablet {
+      padding-left: 450px;
+    }
+
+    @include tablet-portrait {
+      padding-left: 400px;
+    }
+
+    @include mobile-landscape {
+      padding: 200px 20px 0px;
+    }
+
+    .h2 {
+      @include mobile-landscape {
+        text-align: center;
+      }
+    }
+  }
+
+  &-item::before {
+    content: "";
+    background-image: url("../images/effortless-icon.svg");
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-70%);
+
+    @include bg-rules;
+
+    @include mobile-landscape {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-item {
+    align-items: center;
+    padding-right: 60px;
+    position: relative;
+
+    .text-small {
+      padding-left: 60px;
+      padding-top: 10px;
+      padding-bottom: 20px;
+
+      @include tablet-portrait {
+        padding-bottom: 10px;
+      }
+
+      @include mobile-landscape {
+        padding-left: 30px;
+      }
+    }
+  }
+}

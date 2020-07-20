@@ -1,0 +1,48 @@
+@import "../helpers/_mixin-media";
+
+@mixin bg-rules {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin button($color-bg) {
+  box-sizing: border-box;
+  background-color: $color-bg;
+  border-radius: 4px;
+}
+
+@mixin icon-for-cards($color-card) {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba($color-card, 0.25) 85%);
+
+  @include mobile-landscape {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@mixin fonts($weight, $size, $height, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin card-before($image, $color-card) {
+  content: "";
+  background-image: $image;
+  background-repeat: no-repeat;
+  height: 50px;
+  background-position: 50%;
+  width: 50px;
+  border: none;
+  border-radius: 19px;
+  background-color: $color-card;
+  position: absolute;
+
+  @include mobile-landscape {
+    height: 30px;
+    width: 30px;
+  }
+}
