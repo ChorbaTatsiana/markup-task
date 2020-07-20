@@ -1,5 +1,6 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
 
 .container {
   width: 100%;
@@ -8,10 +9,6 @@
 
 .active {
   color: $color-button-bg;
-}
-
-.active-input {
-  background-color: $color-button-bg;
 }
 
 .sub-title {
@@ -26,6 +23,11 @@
 
   @include button($color-button-bg);
   @include fonts(600, 16px, 24px, $color-site-container);
+  @include tablet-portrait-fonts;
+
+  @include mobile-landscape {
+    padding: 7px 10px;
+  }
 }
 
 .button-outline-small {
@@ -34,6 +36,11 @@
 
   @include button($color-site-container);
   @include fonts(600, 16px, 24px, $color-button-sign-in-text);
+  @include tablet-portrait-fonts;
+
+  @include mobile-landscape {
+    padding: 7px 10px;
+  }
 }
 
 .button-filled-medium {
@@ -42,6 +49,7 @@
 
   @include button($color-button-bg);
   @include fonts(bold, 16px, 24px, $color-site-container);
+  @include tablet-portrait-fonts;
 }
 
 .button-filled-large {
@@ -50,6 +58,11 @@
 
   @include button($color-button-bg);
   @include fonts(bold, 16px, 24px, $color-site-container);
+  @include tablet-portrait-fonts;
+
+  @include mobile-landscape {
+    padding: 10px 15px;
+  }
 }
 
 .logo {
@@ -59,4 +72,10 @@
   padding-left: 40px;
 
   @include bg-rules;
+}
+
+@include tablet-portrait {
+  .img-logo {
+    max-width: 70px;
+  }
 }

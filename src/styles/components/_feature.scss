@@ -1,5 +1,6 @@
 @import "../helpers/_variables";
 @import "../helpers/_mixins";
+@import "../helpers/_mixin-media";
 
 .feature {
   background-image: url("../images/bg-feature.png");
@@ -9,28 +10,75 @@
   padding-bottom: 90px;
   margin-bottom: 120px;
 
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include mobile-landscape {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+  }
+
   &-title {
     text-align: center;
-    max-width: 520px;
+    padding: 0 300px;
     margin: 0 auto 54px;
+
+    @include tablet {
+      margin: 0 auto 24px;
+      padding: 0;
+    }
+
+    @include tablet-portrait {
+      margin-bottom: 55px;
+    }
+
+    @include mobile-landscape {
+      margin-bottom: 5px;
+    }
   }
 
   &-cards {
-    max-width: 1095px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 33px;
+
+    @include tablet {
+      margin: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include mobile-landscape {
+      margin-bottom: 0;
+    }
   }
-  
+
   &-card {
     flex-basis: 23%;
     padding-left: 20px;
+
+    @include tablet {
+      flex-basis: 40%;
+      margin-bottom: 30px;
+    }
+    
+    @include mobile-landscape {
+      flex-basis: 70%;
+      position: relative;
+    }
   }
 
   &-button {
     text-transform: uppercase;
     display: block;
     margin: 0 auto;
+  }
+
+  .text-small {
+    @include mobile-landscape {
+      padding-left: 30px;
+    }
   }
 }
 
@@ -52,21 +100,35 @@
 
 .icon-card-first {
   @include icon-for-cards($icon-card-purpl);
+  @include position;
 }
 
 .icon-card-second {
   @include icon-for-cards($color-button-bg);
+  @include position;
 }
 
 .icon-card-three {
   @include icon-for-cards($icon-card-red);
+  @include position;
 }
 
 .icon-card-four {
   @include icon-for-cards($icon-card-blue);
+  @include position;
 }
 
 .card-title {
   padding-top: 30px;
   padding-bottom: 15px;
+
+  @include tablet {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  @include mobile-landscape {
+    padding-left: 30px;
+    padding-top: 0;
+  }
 }

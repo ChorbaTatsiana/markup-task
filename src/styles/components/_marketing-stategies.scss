@@ -1,26 +1,47 @@
 @import "./common-styles";
 @import "../helpers/variables";
 @import "../helpers/mixins";
+@import "../helpers/_mixin-media";
 
 .marketing-strategies {
   .container {
-    max-width: 1107px;
     margin-bottom: 100px;
+
+    @include tablet {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    @include tablet-portrait {
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
 
   .text-small {
     padding-top: 7px;
     padding-bottom: 55px;
   }
+
+  .h2,
+  .text-small {
+    @include mobile-landscape {
+      text-align: center;
+      padding-bottom: 5px;
+    }
+  }
 }
 
 .slider-list {
   display: flex;
   justify-content: space-between;
+
+  @include tablet-portrait {
+    justify-content: center;
+  }
 }
 
 .slider-item {
-  max-width: 348px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   overflow: hidden;
@@ -28,6 +49,36 @@
   .text-small {
     padding-top: 20px;
     padding-bottom: 10px;
+
+    @include tablet {
+      padding-top: 5px;
+      padding-bottom: 1px;
+    }
+
+    @include tablet-portrait {
+      line-height: 15px;
+      font-size: 10px;
+    }
+  }
+
+  @include tablet {
+    flex-basis: 30%;
+  }
+
+  @include tablet-portrait {
+    margin-right: 20px;
+  }
+}
+
+.slider-item:first-child {
+  @include tablet-portrait {
+    display: none;
+  }
+}
+
+.slider-item:last-child {
+  @include mobile-landscape {
+    display: none;
   }
 }
 
@@ -44,6 +95,14 @@
 .slider-dots {
   text-align: center;
   margin-top: 80px;
+
+  @include tablet {
+    margin-top: 0;
+  }
+
+  @include mobile-landscape {
+    display: none;
+  }
 }
 
 .slider-dots_item {

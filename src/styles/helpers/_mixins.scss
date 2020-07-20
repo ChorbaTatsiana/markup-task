@@ -1,3 +1,5 @@
+@import "../helpers/_mixin-media";
+
 @mixin bg-rules {
   background-repeat: no-repeat;
   background-size: contain;
@@ -13,6 +15,11 @@
   width: 50px;
   height: 50px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba($color-card, 0.25) 85%);
+
+  @include mobile-landscape {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 @mixin fonts($weight, $size, $height, $color) {
@@ -33,4 +40,9 @@
   border-radius: 19px;
   background-color: $color-card;
   position: absolute;
+
+  @include mobile-landscape {
+    height: 30px;
+    width: 30px;
+  }
 }
