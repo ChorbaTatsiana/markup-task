@@ -69,6 +69,6 @@
     "input-radio-req-name": true,
     "input-req-label": false,
     "table-req-caption": false,
-    "table-req-header": false,
+    "table-req-design": false,
     "tag-req-attr": false
 }

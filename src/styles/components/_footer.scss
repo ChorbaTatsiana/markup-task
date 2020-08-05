@@ -1,7 +1,3 @@
-@import "../helpers/_variables";
-@import "../helpers/_mixins";
-@import "../helpers/_mixin-media";
-
 .footer {
   margin-bottom: 95px;
 
@@ -29,6 +25,7 @@
   & .button-outline-small {
     padding-right: 90px;
     margin-bottom: 20px;
+    text-overflow: ellipsis;
 
     @include fonts(900, 16px, 28px, $color-footer-button-tel);
 
@@ -47,7 +44,7 @@
     }
 
     @include mobile-landscape {
-      padding: 0px 150px;
+      padding: 0 150px;
     }
   }
 
