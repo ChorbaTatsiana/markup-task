@@ -6,9 +6,8 @@
   "scripts": {
     "lh": "htmlhint ./src/**/*.html",
     "lc": "stylelint ./src/**/*.scss",
-    "comb": "csscomb ./src",
     "js": "eslint ./src/**/*.js",
-    "lint": "npm run comb && npm run lh && npm run lc",
+    "lint": "npm run lh && npm run lc",
     "build": "gulp build",
     "start": "gulp start"
   },

@@ -1,19 +1,20 @@
 export const sliderModule = (function() {
-  function initSlider(id, count, countScroll) {
-    const crslRoot = document.getElementById(id);
-    const sliderCount = count;
-    const sliderScroll = countScroll;
+  function initSlider(id, slidercount, countScroll) {
 
-    const list = crslRoot.getElementsByTagName("ul");
-    const items = crslRoot.getElementsByTagName("li");
-    const leftArrow = crslRoot.querySelector(".slider-arrow-left");
-    const rightArrow = crslRoot.querySelector(".slider-arrow-right");
-    const wrapperDots = crslRoot.querySelector(".slider-dots");
+    const crslRoot = document.getElementById(id),
+    sliderCount = slidercount,
+    sliderScroll = countScroll,
+    list = crslRoot.getElementsByTagName("ul"),
+    items = crslRoot.getElementsByTagName("li"),
+    leftArrow = crslRoot.querySelector(".slider-arrow-left"),
+    rightArrow = crslRoot.querySelector(".slider-arrow-right"),
+    wrapperDots = crslRoot.querySelector(".slider-dots"),
+    pageWidth = crslRoot.offsetWidth,
+    itemWidth = pageWidth / sliderCount,//ширина элемента
+    movePosition = sliderScroll * itemWidth, //на сколько сдвигать
+    itemCount = items.length;
+
     let position = 0;
-    const pageWidth = crslRoot.offsetWidth;
-    const itemWidth = pageWidth / sliderCount; //ширина элемента
-    const movePosition = sliderScroll * itemWidth; //на сколько сдвигать
-    const itemCount = items.length;
 
     for (let i = 0; i < items.length; i++) {
       items[i].style.minWidth = `${itemWidth}px`;
@@ -41,19 +42,20 @@ export const sliderModule = (function() {
     };
 
     const checkArrow = () => {
-      if (position !== 0) {leftArrow.classList.remove('slider-arrow-not-get');
-     } else {
-        leftArrow.classList.add('slider-arrow-not-get');
-    }
-       if (position <= -(itemCount - sliderCount) * itemWidth) {rightArrow.classList.add('slider-arrow-not-get');
-  }
-       else {
-        rightArrow.classList.remove('slider-arrow-not-get');
-       }
-  }
-    
-    function initDots(items) {
-      const countDots = Math.ceil(itemCount / sliderCount);
+      if (position !== 0) {
+        leftArrow.classList.remove("slider-arrow-not-get");
+      } else {
+        leftArrow.classList.add("slider-arrow-not-get");
+      }
+      if (position <= -(itemCount - sliderCount) * itemWidth) {
+        rightArrow.classList.add("slider-arrow-not-get");
+      } else {
+        rightArrow.classList.remove("slider-arrow-not-get");
+      }
+    };
+    const countDots = Math.ceil(itemCount / sliderCount);
+
+    function initDots() {
       for (let i = 0; i < countDots; i++) {
         wrapperDots.appendChild(createDot(i));
       }
@@ -74,6 +76,12 @@ export const sliderModule = (function() {
       let attribute = element.getAttribute("data-index");
       position = -attribute * pageWidth;
 
+      if (
+        attribute * sliderCount > itemCount - sliderCount &&
+        attribute <= itemCount
+      ) {
+        position = -(itemCount - sliderCount) * itemWidth;
+      }
       setPosition();
     }
 
