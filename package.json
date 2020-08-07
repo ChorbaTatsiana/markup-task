@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lh": "htmlhint ./src/**/*.html",
-    "lc": "stylelint ./src/**/*.scss",
-    "js": "eslint ./src/**/*.js",
-    "lint": "npm run lh && npm run lc",
+    "html-lint": "htmlhint ./src/**/*.html",
+    "style-lint": "stylelint ./src/**/*.scss",
+    "js-lint": "eslint ./src/**/*.js",
+    "lint": "npm run html-lint && npm run style-lint",
     "build": "gulp build",
     "start": "gulp start"
   },
