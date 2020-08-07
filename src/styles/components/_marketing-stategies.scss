@@ -100,22 +100,59 @@
   }
 }
 
-.slider-dots_item {
-  cursor: pointer;
-  height: 16px;
-  width: 16px;
-  margin: 10px;
-  background-color: $color-bg-slider-circle;
-  border-radius: 50%;
-  display: inline-block;
-  border: none;
-  position: relative;
-}
-
 .slider-dots_item:hover {
   background-color: $color-button-bg;
 }
 
 .slider-arrows {
   display: none;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  text-align: center;
+}
+
+.img-slider {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.slider-arrow-left,
+.slider-arrow-right {
+  border: solid 1px black;
+  display: inline-block;
+  padding: 0px 20px;
+  font-size: 25px;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: $color-nav-link;
+}
+
+.slider-arrow-not-get {
+  background-color: $color-bg-burger;
+}
+.slider-arrow-right:hover {
+  cursor: pointer;
+  background-color: $color-bg-slider-circle;
+}
+
+.slider-arrow-left:hover {
+  cursor: pointer;
+  background-color: $color-bg-slider-circle;
+}
+
+.dot-slider {
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+  margin: 10px;
+  background-color: $color-bg-slider-circle;
+  border-radius: 50%;
+  display: inline-block;
+  border: none;
+}
+
+.active-dot {
+  background-color: $color-bg-burger;
 }
